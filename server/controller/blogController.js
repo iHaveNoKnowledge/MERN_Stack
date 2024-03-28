@@ -5,8 +5,8 @@ exports.create = (req,res)=>{
     })
 }
 
-exports.yes = (req, res)=>{
+exports.save = (req, res)=>{
     res.json({
-        data:"Yes Yes Yes"
+        data:"save"
     })
 }
