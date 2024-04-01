@@ -1,12 +1,17 @@
 //ติดต่อฐานข้อมูล
-exports.create = (req,res)=>{
-    res.json({
-        data:"Hellow from  blog-controller"
-    })
-}
+const slugify = require("slugify")
 
-exports.save = (req, res)=>{
-    res.json({
-        data:"save"
-    })
-}
+//บันทึกข้อมูล
+exports.create = (req, res) => {
+  const { title, content, author } = req.body;
+  const slug = slugify(title)
+  res.json({
+    data: { title, content, author, slug }
+  });
+};
+
+exports.save = (req, res) => {
+  res.json({
+    data: "save",
+  });
+};

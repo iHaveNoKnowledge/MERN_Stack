@@ -7,7 +7,7 @@ const blogRoute = require("./route/blog");
 
 const app = express();
 
-//connect cloud database
+//*connect cloud database
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
@@ -16,15 +16,15 @@ mongoose
   .then(() => console.log("Connected!"))
   .catch((err) => console.log("Error: ", err));
 
-//middleware
+//*middleware
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-//router
+//*router
 app.use('/api', blogRoute)
 
-//port runner
+//*port runner
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Start server in port ${port}`);
