@@ -3,6 +3,7 @@
 
 const mongoose = require("mongoose");
 
+
 const blogSchema = mongoose.Schema(
   {
     title: {
@@ -14,8 +15,8 @@ const blogSchema = mongoose.Schema(
       required: true,
     },
     author: {
-      type: String,
-      default: "Admin",
+      type:String,
+      default:"Admin"
     },
     slug: {
       type: String,
