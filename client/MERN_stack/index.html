@@ -5,9 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <section id="user-input">
+      <form>
+        <div class="form-control">
+          <label for="user-message">Your Message</label>
+          <textarea id="user-message" name="user-message"></textarea>
+        </div>
+        <div class="form-control">
+          <label for="message-image">Message Image</label>
+          <input type="text" id="message-image" name="message-image" />
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <section id="user-messages">
+      <ul></ul>
+    </section>
 </html>
